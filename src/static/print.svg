@@ -1,0 +1,29 @@
+<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>print</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-2547 -1226)">
+<g id="print">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(2553.8 1243.2)" fill="#2E6379"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(2553.8 1245.2)" fill="#2E6379"/>
+</g>
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(2547 1226)" fill="#2E6379"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(2565.8 1235.6)" fill="#2E6379"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 10 0L 0.4 0C 0.1788 0 0 0.1788 0 0.4C 0 0.6212 0.1788 0.8 0.4 0.8L 10 0.8C 10.2212 0.8 10.4 0.6212 10.4 0.4C 10.4 0.1788 10.2212 0 10 0Z"/>
+<path id="path1_fill" d="M 20.4 6.8L 20.4 0L 3.6 0L 3.6 6.8L 0 6.8L 0 20.4L 2.4 20.4L 2.4 21.6L 3.6 21.6L 3.6 24L 20.4 24L 20.4 21.6L 21.6 21.6L 21.6 20.4L 24 20.4L 24 6.8L 20.4 6.8ZM 4.4 0.8L 19.6 0.8L 19.6 6.8L 4.4 6.8L 4.4 0.8ZM 19.6 21.6L 19.6 23.2L 4.4 23.2L 4.4 21.6L 4.4 14.8L 19.6 14.8L 19.6 21.6ZM 20 12.8C 18.8972 12.8 18 11.9028 18 10.8C 18 9.6972 18.8972 8.8 20 8.8C 21.1028 8.8 22 9.6972 22 10.8C 22 11.9028 21.1028 12.8 20 12.8Z"/>
+<path id="path2_fill" d="M 1.2 2.4C 1.86274 2.4 2.4 1.86274 2.4 1.2C 2.4 0.537258 1.86274 0 1.2 0C 0.537258 0 0 0.537258 0 1.2C 0 1.86274 0.537258 2.4 1.2 2.4Z"/>
+</defs>
+</svg>

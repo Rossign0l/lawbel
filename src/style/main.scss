@@ -1,0 +1,52 @@
+@import "./normalize.css";
+
+html {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+header {
+  .header-nav {
+    background: #1c4549;
+    padding: 0 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .tel {
+      font-size: 20px;
+      line-height: 48px;
+      margin: 0;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .expanded-menu {
+      display: flex;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 200;
+        padding: 12px 10px;
+        margin-left: -2px;
+      }
+    }
+  }
+  .header-content {
+    background: #6c9ea1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px 48px;
+
+    .social {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
