@@ -1,0 +1,34 @@
+.contacts-info {
+  .address {
+    background: #367c83;
+    p {
+      color: #fff;
+      padding: 12px 0;
+      text-align: center;
+    }
+  }
+  .contacts {
+    display: grid;
+    grid-template-columns: repeat(2, 6fr);
+    grid-template-rows: repeat(2, 64px);
+    padding-top: 24px;
+    div {
+      display: flex;
+      flex-direction: column;
+      &::nth-child(odd) {
+        grid-column: 1;
+      }
+      &::nth-child(even) {
+        grid-column: 2;
+      }
+      span {
+        font-family: "Roboto", sans-serif;
+        color: #37434a;
+      }
+      a {
+        font-size: 18px;
+        text-decoration: underline;
+      }
+    }
+  }
+}

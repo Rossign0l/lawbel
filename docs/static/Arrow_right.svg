@@ -1,0 +1,14 @@
+<svg width="15" height="22" viewBox="0 0 15 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Arrow slider</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-3531 -1924)">
+<g id="Arrow slider">
+<g id="action">
+<use xlink:href="#path0_fill" transform="matrix(-1 -8.74228e-08 8.74228e-08 -1 3546 1946)" fill="#367C83"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 15 22L 15 0L 0 11L 15 22Z"/>
+</defs>
+</svg>
