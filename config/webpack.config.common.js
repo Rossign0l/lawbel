@@ -30,7 +30,7 @@ module.exports = {
   },
   entry: ["./src/js/app.js", "./src/style/main.scss"],
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(process.cwd(), "docs"),
     filename: "app.bundle.js"
   },
   optimization: {
@@ -52,7 +52,14 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader
           },
           "css-loader",
-          "postcss-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              config: {
+                path: path.resolve(__dirname, "postcss.config.js")
+              }
+            }
+          },
           "sass-loader"
         ]
       },
