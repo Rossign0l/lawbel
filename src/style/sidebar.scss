@@ -1,0 +1,107 @@
+section.side {
+  @media (max-width: 1170px) {
+    display: none;
+  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  //   width: 25%;
+  width: 350px;
+  height: 100%;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 24px auto;
+  display: grid;
+  background: url(../static/overlay.png),
+    url(../static/sidebar_background.jpg) no-repeat;
+  background-size: cover;
+  .logo {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row: 2;
+    display: flex;
+    align-items: stretch;
+  }
+  .photo {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row: 3;
+    position: relative;
+    height: 20vh;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .overlay {
+      background: rgba(91, 132, 134, 0.6);
+      height: 32px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+  .phone {
+    background: rgba(0, 0, 0, 0.4);
+    grid-row: 4;
+    margin: 12px 0;
+    border-radius: 35px;
+    padding: 0 24px;
+    max-height: 100px;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    flex-direction: column;
+    display: flex;
+    color: #fff;
+    text-align: center;
+    span {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1px;
+      line-height: 16px;
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    a {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      line-height: 48px;
+      color: #fff;
+    }
+  }
+  nav {
+    grid-row: 5;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    flex-direction: column;
+    display: flex;
+    li {
+      letter-spacing: 2px;
+      padding: 12px 0;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+      border-top: 2px solid rgba(255, 255, 255, 0.3);
+      font-size: 12px;
+      margin-bottom: -2px;
+      text-align: center;
+      a {
+        text-transform: uppercase;
+        color: #fff;
+      }
+    }
+  }
+  footer {
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 12px;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row: 7;
+    .social {
+      margin-bottom: 14px;
+      a {
+        margin: 0 10px;
+      }
+    }
+  }
+}

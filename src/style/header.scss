@@ -1,4 +1,7 @@
 header {
+  @media (min-width: 1170px) {
+    display: none;
+  }
   grid-column-start: 1;
   grid-column-end: 13;
   grid-row: 1;
@@ -43,8 +46,10 @@ header {
     margin-top: 48px;
 
     .social {
-      display: flex;
-      flex-direction: row;
+      @media (min-width: 640px) {
+        display: flex;
+      }
+      display: none;
       justify-content: center;
       align-items: center;
       a {

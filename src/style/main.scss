@@ -2,6 +2,7 @@
 @import "./header.scss";
 @import "./content.scss";
 @import "./footer.scss";
+@import "./sidebar.scss";
 
 html {
   box-sizing: border-box;
@@ -54,7 +55,7 @@ a {
     text-decoration: underline;
   }
 }
-
-section {
-  margin-top: 48px;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
