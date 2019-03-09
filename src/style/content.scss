@@ -1,9 +1,6 @@
 @import "./contacts.scss";
 
 main {
-  @media (min-width: 1170px) {
-    margin-left: 350px;
-  }
   display: grid;
   grid-column-start: 1;
   grid-column-end: 13;
@@ -39,6 +36,83 @@ main {
         p {
           margin-left: 10px;
           margin-right: 32px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 900px) {
+    margin-left: 350px;
+  }
+  @media (min-width: 1440px) {
+    h1,
+    h2,
+    h3,
+    p,
+    a,
+    span {
+      text-align: center;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 500;
+    }
+    p {
+      font-size: 18px;
+    }
+    h2 {
+      grid-column-start: 3;
+      grid-column-end: 11;
+    }
+    > section {
+      grid-column-start: 1;
+      grid-column-end: 13;
+      margin-left: 38px;
+      margin-right: 38px;
+      &.help {
+        h3 {
+          font-weight: 200;
+          color: #37434a;
+          position: absolute;
+          padding: 0 10px;
+          top: -25px;
+          left: 24%;
+          right: 24%;
+          background: #f5f5f5;
+          margin: 0;
+          font-family: "Open Sans", sans-serif;
+          font-size: 24px;
+        }
+        .help-kind {
+          border: 2px solid #367c83;
+          border-radius: 25px;
+          margin-top: 48px;
+          position: relative;
+          ul {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 48px;
+            margin: 0;
+            li {
+              padding: 24px 24px 0 24px;
+              a {
+                flex-direction: column;
+                border-bottom: 0;
+                img.arrow {
+                  display: none;
+                }
+              }
+              p {
+                font-size: 15px;
+                margin: 24px 0 10px 0;
+              }
+            }
+          }
+          span {
+            margin-bottom: 24px;
+            display: block;
+          }
         }
       }
     }

@@ -1,5 +1,5 @@
-header {
-  @media (min-width: 1170px) {
+header.header {
+  @media (min-width: 900px) {
     display: none;
   }
   grid-column-start: 1;
@@ -14,7 +14,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1;
-
+    top: 0;
     .tel {
       font-size: 20px;
       line-height: 48px;

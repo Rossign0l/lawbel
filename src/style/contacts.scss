@@ -31,4 +31,28 @@
       }
     }
   }
+  @media (min-width: 1440px) {
+    .contacts-block {
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: auto;
+      display: grid;
+      border: 2px solid #367c83;
+      border-radius: 25px;
+      overflow: hidden;
+      .contacts {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        display: flex;
+        justify-content: space-around;
+        padding: 48px 0;
+      }
+      .address {
+        grid-column-start: 6;
+        grid-column-end: 10;
+      }
+    }
+    .map {
+      margin-top: 14px;
+    }
+  }
 }
