@@ -11,7 +11,7 @@ main {
   > section {
     grid-column-start: 2;
     grid-column-end: 12;
-    margin-top: 48px;
+    margin-top: 3.5rem;
 
     &.help {
       li {
@@ -32,6 +32,10 @@ main {
           margin-left: 10px;
           margin-right: 32px;
         }
+      }
+      span {
+        display: block;
+        margin-top: 1rem;
       }
     }
 
@@ -68,7 +72,7 @@ main {
         display: block;
         border-top: 2px solid #367c83;
         width: 70%;
-        bottom: -30px;
+        bottom: -3rem;
         left: 15%;
       }
       &.help {
@@ -111,9 +115,6 @@ main {
               }
             }
           }
-        }
-        span {
-          display: block;
         }
       }
       &#description {

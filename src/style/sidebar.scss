@@ -21,11 +21,13 @@ section.side {
     align-items: center;
     justify-content: space-evenly;
     line-height: 1.5;
+    img {
+      height: 40px;
+    }
     .title {
       font-size: 0.8rem;
       font-weight: bold;
       border-bottom: 1px solid;
-      margin-bottom: 5px;
     }
     .upper {
       text-transform: uppercase;
@@ -86,8 +88,8 @@ section.side {
     li {
       color: #fff;
       letter-spacing: 2px;
-      padding: 12px 0;
-      margin: 12px 0;
+      padding: 0.8rem 0;
+      margin: 0.7rem 0;
       border-bottom: 2px solid rgba(255, 255, 255, 0.3);
       border-top: 2px solid rgba(255, 255, 255, 0.3);
       font-size: 0.9rem;
@@ -103,7 +105,7 @@ section.side {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 12px;
+    padding: 0 0 10px 0;
     grid-column-start: 1;
     grid-column-end: 13;
     grid-row: 7;
