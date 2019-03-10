@@ -42,6 +42,9 @@ function handleNavClick(e) {
     case "nav-main":
       window.scrollTo(0, 0);
       break;
+    case "top-main":
+      window.scrollTo(0, 0);
+      break;
     case "nav-help-kind":
       mainSection.scrollIntoView();
       break;
@@ -51,7 +54,10 @@ function handleNavClick(e) {
     case "nav-blog":
       window.open("https://www.lawkrok.by");
       break;
-    case "nav-self":
+    case "top-blog":
+      window.open("https://www.lawkrok.by");
+      break;
+    case "nav-self" || "top-self":
       break;
   }
 }
