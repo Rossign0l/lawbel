@@ -47,7 +47,9 @@ module.exports = {
         use: [
           {
             loader: "file-loader",
-            options: {}
+            options: {
+              outputPath: "static"
+            }
           }
         ]
       },
@@ -99,6 +101,5 @@ module.exports = {
   ],
   stats: {
     colors: true
-  },
-  devtool: "source-map"
+  }
 };

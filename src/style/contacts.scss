@@ -41,6 +41,17 @@
       grid-column: 2;
     }
   }
+
+  .download-payments {
+    margin: 1rem;
+    a {
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
   @media (min-width: 1440px) {
     .contacts-block {
       grid-template-columns: repeat(9, 1fr);

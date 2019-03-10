@@ -21,10 +21,6 @@ section.side {
     align-items: center;
     justify-content: space-evenly;
     line-height: 1.5;
-    img {
-      height: 40px;
-      width: auto;
-    }
     .title {
       font-size: 0.8rem;
       font-weight: bold;
@@ -88,6 +84,7 @@ section.side {
     flex-direction: column;
     display: flex;
     li {
+      color: #fff;
       letter-spacing: 2px;
       padding: 12px 0;
       margin: 12px 0;
@@ -98,9 +95,6 @@ section.side {
       cursor: pointer;
       &:hover {
         text-decoration: underline;
-      }
-      a {
-        color: #fff;
       }
     }
   }

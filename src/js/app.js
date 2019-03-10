@@ -1,43 +1,60 @@
 var mainSection = document.getElementById("main");
-var helpSection = document.getElementById("help");
+var contactsSections = document.getElementById("contacts-info");
 var sidebar = document.getElementById("side");
+var header = document.getElementById("header");
 
-// helpSection.addEventListener("click", handleHelpClick);
-// function handleHelpClick(event) {
-//   var target = event.target;
-//   while (target != helpSection) {
-//     if (target.tagName == "LI") {
-//       mainSection.querySelectorAll("section").forEach(section => {
-//         if (
-//           section.classList.contains("help") ||
-//           section.classList.contains("about")
-//         ) {
-//           section.style.display = "none";
-//         }
-//       });
-//       var helpDescriptionSection = document.createElement("section");
-//       helpDescriptionSection.id = "help-description";
-//       helpDescriptionSection.innerHTML = helpDescriptionsMapping[target.id];
-//       mainSection.insertBefore(
-//         helpDescriptionSection,
-//         mainSection.firstElementChild
-//       );
-//       return;
-//     }
-//     target = target.parentNode;
-//   }
-// }
+mainSection.addEventListener("click", handleHelpClick);
 
-// sidebar.querySelector("li").addEventListener("click", handleSideClick);
-// function handleSideClick(e) {
-//   mainSection.querySelectorAll("section").forEach(section => {
-//     section.style.display = "";
-//   });
-//   var helpDescr = document.getElementById("help-description");
-//   if (helpDescr) {
-//     helpDescr.parentNode.removeChild(helpDescr);
-//   }
-// }
+function handleHelpClick(event) {
+  var target = event.target;
+  while (target != mainSection) {
+    if (target.tagName == "LI") {
+      mainSection.querySelectorAll("main > section").forEach(section => {
+        if (section.id != "contacts-info") section.hidden = true;
+      });
+      var helpDescriptionSection = document.createElement("section");
+      helpDescriptionSection.id = "description";
+      helpDescriptionSection.innerHTML = helpDescriptionsMapping[target.id];
+      mainSection.insertBefore(
+        helpDescriptionSection,
+        mainSection.firstElementChild
+      );
+      return;
+    }
+    target = target.parentNode;
+  }
+}
+
+sidebar
+  .querySelectorAll("li")
+  .forEach(button => button.addEventListener("click", handleNavClick));
+header
+  .querySelectorAll("li")
+  .forEach(button => button.addEventListener("click", handleNavClick));
+
+function handleNavClick(e) {
+  var helpDescr = document.getElementById("description");
+  if (helpDescr) mainSection.removeChild(helpDescr);
+  mainSection
+    .querySelectorAll("main > section")
+    .forEach(section => (section.hidden = false));
+  switch (e.target.id) {
+    case "nav-main":
+      window.scrollTo(0, 0);
+      break;
+    case "nav-help-kind":
+      mainSection.scrollIntoView();
+      break;
+    case "nav-contacts-info":
+      contactsSections.scrollIntoView();
+      break;
+    case "nav-blog":
+      window.open("https://www.lawkrok.by");
+      break;
+    case "nav-self":
+      break;
+  }
+}
 
 var helpDescriptionsMapping = {
   debt: `
@@ -45,6 +62,7 @@ var helpDescriptionsMapping = {
   Взыскание дебиторской задолженности и штрафных санкций. Исполнительное
   производство
 </h1>
+<img src="static/1-1.jpg" />
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id ipsum
   id velit congue tempor in eu tellus. Nullam sollicitudin purus vitae

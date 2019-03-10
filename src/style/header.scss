@@ -25,17 +25,15 @@ header.header {
     }
 
     .expanded-menu {
-      @media (min-width: 640px) {
-        display: flex;
+      @media (max-width: 640px) {
+        display: none;
       }
-      display: none;
-      a {
+      li {
+        display: inline;
         color: #fff;
         text-transform: uppercase;
         letter-spacing: 2px;
-        font-weight: 200;
-        padding: 12px 10px;
-        margin-left: -2px;
+        padding: 0.8rem;
       }
     }
   }

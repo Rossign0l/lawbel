@@ -22,23 +22,21 @@ main {
         padding: 24px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         position: relative;
-
-        img {
-          height: 72px;
-          width: auto;
-
-          &.arrow {
-            display: block;
-            position: absolute;
-            right: 0;
-            width: 15px;
-          }
+        .arrow {
+          display: block;
+          position: absolute;
+          right: 0;
+          width: 15px;
         }
         p {
           margin-left: 10px;
           margin-right: 32px;
         }
       }
+    }
+
+    &#description img {
+      display: none;
     }
   }
 
@@ -116,6 +114,18 @@ main {
         }
         span {
           display: block;
+        }
+      }
+      &#description {
+        p {
+          text-align: justify;
+        }
+        img {
+          display: block;
+          float: right;
+          max-width: 750px;
+          width: 100%;
+          margin: 0 0 1rem 1rem;
         }
       }
     }
