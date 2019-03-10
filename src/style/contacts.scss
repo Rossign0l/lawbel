@@ -1,26 +1,26 @@
 .contacts-info {
-  .address {
+  .payment {
     background: #367c83;
     p {
       color: #fff;
-      padding: 12px 0;
+      padding: 12px;
       text-align: center;
     }
   }
   .contacts {
     display: grid;
-    grid-template-columns: repeat(2, 6fr);
-    grid-template-rows: repeat(2, 64px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
     padding-top: 24px;
+    @media (max-width: 640px) {
+      display: block;
+      div {
+        margin-bottom: 10px;
+      }
+    }
     div {
       display: flex;
       flex-direction: column;
-      &::nth-child(odd) {
-        grid-column: 1;
-      }
-      &::nth-child(even) {
-        grid-column: 2;
-      }
       span {
         font-family: "Roboto", sans-serif;
         color: #37434a;
@@ -30,11 +30,20 @@
         text-decoration: underline;
       }
     }
+    p {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .tel {
+      grid-column: 1;
+    }
+    .mail {
+      grid-column: 2;
+    }
   }
   @media (min-width: 1440px) {
     .contacts-block {
       grid-template-columns: repeat(9, 1fr);
-      grid-template-rows: auto;
       display: grid;
       border: 2px solid #367c83;
       border-radius: 25px;
@@ -42,11 +51,8 @@
       .contacts {
         grid-column-start: 1;
         grid-column-end: 6;
-        display: flex;
-        justify-content: space-around;
-        padding: 48px 0;
       }
-      .address {
+      .payment {
         grid-column-start: 6;
         grid-column-end: 10;
       }

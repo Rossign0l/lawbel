@@ -14,7 +14,8 @@ main {
     margin-top: 48px;
 
     &.help {
-      li a {
+      li {
+        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -23,8 +24,8 @@ main {
         position: relative;
 
         img {
-          width: 72px;
           height: 72px;
+          width: auto;
 
           &.arrow {
             display: block;
@@ -53,22 +54,25 @@ main {
     span {
       text-align: center;
     }
-    h1 {
-      font-size: 32px;
-      font-weight: 500;
-    }
-    p {
-      font-size: 18px;
-    }
     h2 {
       grid-column-start: 3;
       grid-column-end: 11;
     }
     > section {
+      position: relative;
       grid-column-start: 1;
       grid-column-end: 13;
       margin-left: 38px;
       margin-right: 38px;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        border-top: 2px solid #367c83;
+        width: 70%;
+        bottom: -30px;
+        left: 15%;
+      }
       &.help {
         h3 {
           font-weight: 200;
@@ -96,23 +100,22 @@ main {
             margin: 0;
             li {
               padding: 24px 24px 0 24px;
-              a {
-                flex-direction: column;
-                border-bottom: 0;
-                img.arrow {
-                  display: none;
-                }
+
+              flex-direction: column;
+              border-bottom: 0;
+              img.arrow {
+                display: none;
               }
+
               p {
                 font-size: 15px;
                 margin: 24px 0 10px 0;
               }
             }
           }
-          span {
-            margin-bottom: 24px;
-            display: block;
-          }
+        }
+        span {
+          display: block;
         }
       }
     }

@@ -9,7 +9,7 @@
     "lint:styles": "stylelint \"src/**/*.scss\"",
     "lint:html": "pa11y-ci ../src/**/*.html",
     "start:dev": "webpack-dev-server --config config/webpack.config.dev.js",
-    "start": "webpack --config config/webpack.config.prod.js && http-server ./docs -o"
+    "start": "webpack --config config/webpack.config.dev.js && http-server ./docs -o"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.10",
