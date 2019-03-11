@@ -9,9 +9,9 @@ function handleHelpClick(event) {
   var target = event.target;
   while (target != mainSection) {
     if (target.tagName == "LI") {
-      mainSection.querySelectorAll("main > section").forEach(section => {
-        if (section.id != "contacts-info") section.hidden = true;
-      });
+      mainSection
+        .querySelectorAll("main > section")
+        .forEach(section => (section.hidden = true));
       var helpDescriptionSection = document.createElement("section");
       helpDescriptionSection.id = "description";
       helpDescriptionSection.innerHTML = helpDescriptionsMapping[target.id];

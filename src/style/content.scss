@@ -4,7 +4,6 @@ main {
   display: grid;
   grid-column-start: 1;
   grid-column-end: 13;
-  grid-row: 2;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
 
@@ -12,6 +11,12 @@ main {
     grid-column-start: 2;
     grid-column-end: 12;
     margin-top: 3.5rem;
+
+    &.about {
+      p {
+        margin-bottom: 0;
+      }
+    }
 
     &.help {
       li {
