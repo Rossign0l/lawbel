@@ -2,6 +2,7 @@ var mainSection = document.getElementById("main");
 var contactsSections = document.getElementById("contacts-info");
 var sidebar = document.getElementById("side");
 var header = document.getElementById("header");
+var mediation = document.getElementById("mediation-help");
 
 mainSection.addEventListener("click", handleHelpClick);
 
@@ -54,6 +55,9 @@ function handleNavClick(e) {
       break;
     case "nav-contacts-info":
       contactsSections.scrollIntoView();
+      break;
+    case "nav-mediation":
+      mediation.scrollIntoView();
       break;
     case "nav-blog":
       window.open("https://www.lawkrok.by");
