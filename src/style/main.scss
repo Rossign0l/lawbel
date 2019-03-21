@@ -12,6 +12,10 @@ html {
   position: relative;
   max-width: 1600px;
   margin: auto;
+  height: 100%;
+}
+body {
+  min-height: 100%;
 }
 *,
 *:before,
@@ -37,8 +41,9 @@ a {
 
 h1,
 h2 {
-  letter-spacing: 5px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
+  font-weight: normal;
 }
 
 h6 {

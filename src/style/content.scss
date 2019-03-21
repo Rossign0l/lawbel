@@ -6,12 +6,15 @@ main {
   grid-column-end: 13;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
+  height: 100%;
 
   > section {
     grid-column-start: 2;
     grid-column-end: 12;
     margin-top: 3.5rem;
-
+    &:first-child {
+      margin-top: 1.7rem;
+    }
     &.about {
       p {
         margin-bottom: 0;
@@ -27,6 +30,9 @@ main {
         padding: 24px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         position: relative;
+        &:hover {
+          text-decoration: underline;
+        }
         .arrow {
           display: block;
           position: absolute;
@@ -43,8 +49,7 @@ main {
         margin-top: 1rem;
       }
     }
-
-    &#description img {
+    &#license {
       display: none;
     }
   }
@@ -69,7 +74,7 @@ main {
       grid-column-end: 13;
       margin-left: 38px;
       margin-right: 38px;
-      &::after {
+      &:not(:last-child):after {
         content: "";
         position: absolute;
         display: block;
@@ -120,17 +125,11 @@ main {
           }
         }
       }
-      &#description {
-        p {
-          text-align: justify;
-        }
-        img {
-          display: block;
-          float: right;
-          max-width: 750px;
-          width: 100%;
-          margin: 0 0 1rem 1rem;
-        }
+      &#license {
+        display: block;
+        text-align: center;
+        font-size: 0.8rem;
+        align-self: flex-end;
       }
     }
   }

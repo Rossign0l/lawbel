@@ -3,6 +3,7 @@ var contactsSections = document.getElementById("contacts-info");
 var sidebar = document.getElementById("side");
 var header = document.getElementById("header");
 var mediation = document.getElementById("mediation-help");
+var logo = document.getElementById("logo");
 
 mainSection.addEventListener("click", handleHelpClick);
 
@@ -28,6 +29,7 @@ function insertHelpDescriptionSection(id) {
     helpDescriptionSection,
     mainSection.firstElementChild
   );
+  window.scrollTo(0, 0);
 }
 
 sidebar
@@ -36,6 +38,8 @@ sidebar
 header
   .querySelectorAll("li")
   .forEach(button => button.addEventListener("click", handleNavClick));
+
+logo.addEventListener("click", handleNavClick);
 
 function handleNavClick(e) {
   var helpDescr = document.getElementById("description");
@@ -68,6 +72,8 @@ function handleNavClick(e) {
     case "nav-self" || "top-self":
       insertHelpDescriptionSection("self");
       break;
+    default:
+      window.scrollTo(0, 0);
   }
 }
 

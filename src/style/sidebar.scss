@@ -19,15 +19,15 @@ section.side {
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1.5;
+    line-height: 1.3;
+    font-size: 0.9rem;
+    cursor: pointer;
     img {
       height: 2.5rem;
       margin-right: 0.5rem;
     }
     .title {
-      font-weight: bold;
       border-bottom: 1px solid;
-      font-size: 0.8rem;
     }
     .upper {
       text-transform: uppercase;
@@ -55,7 +55,6 @@ section.side {
     background: rgba(0, 0, 0, 0.4);
     grid-row: 3;
     border-radius: 15px;
-    max-height: 110px;
     grid-column-start: 2;
     grid-column-end: 12;
     flex-direction: column;
@@ -65,19 +64,21 @@ section.side {
     letter-spacing: 1px;
     margin: 0.5rem 0;
     justify-content: space-evenly;
+    align-self: center;
     span {
       text-transform: uppercase;
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       padding: 0.5rem 0;
+      line-height: 1.3;
     }
     a {
       font-family: "Roboto", sans-serif;
       font-size: 24px;
       color: #fff;
+      padding: 0.5rem 0;
       @media (max-height: 800px) {
         font-size: 1.2rem;
-        padding: 0.5rem 0;
       }
     }
   }
@@ -91,9 +92,7 @@ section.side {
       color: #fff;
       letter-spacing: 2px;
       padding: 0.8rem 0;
-      margin: 0.7rem 0;
       border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-      border-top: 2px solid rgba(255, 255, 255, 0.3);
       font-size: 0.9rem;
       text-align: center;
       cursor: pointer;
@@ -102,7 +101,6 @@ section.side {
         text-decoration: underline;
       }
       @media (max-height: 800px) {
-        border-top: 0;
         margin: 0;
         padding: 0.5rem 0;
         font-size: 0.8rem;
