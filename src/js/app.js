@@ -3,7 +3,6 @@ var contactsSections = document.getElementById("contacts-info");
 var sidebar = document.getElementById("side");
 var header = document.getElementById("header");
 var mediation = document.getElementById("mediation-help");
-var logo = document.getElementById("logo");
 var burger = document.getElementById("burger");
 
 mainSection.addEventListener("click", handleHelpClick);
@@ -40,7 +39,9 @@ header
   .querySelectorAll("li")
   .forEach(button => button.addEventListener("click", handleNavClick));
 
-logo.addEventListener("click", handleNavClick);
+document
+  .querySelectorAll(".logo")
+  .forEach(logo => logo.addEventListener("click", handleNavClick));
 
 function handleNavClick(e) {
   var helpDescr = document.getElementById("description");
