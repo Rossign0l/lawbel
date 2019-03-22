@@ -22,27 +22,13 @@ header.header {
       text-align: center;
       text-decoration: none;
     }
-
-    .expanded-menu {
-      @media (max-width: 640px) {
-        display: none;
-      }
-      li {
-        display: inline;
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        padding: 0.8rem;
-        cursor: pointer;
-      }
-    }
   }
   .header-content {
     background: #6c9ea1;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 24px 8%;
+    padding: 0.5rem;
     margin-top: 48px;
 
     .social {

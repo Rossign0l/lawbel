@@ -7,7 +7,14 @@ main {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
   height: 100%;
-
+  h1,
+  h2,
+  h3,
+  a,
+  p,
+  span {
+    text-align: center;
+  }
   > section {
     grid-column-start: 2;
     grid-column-end: 12;
@@ -20,7 +27,6 @@ main {
         margin-bottom: 0;
       }
     }
-
     &.help {
       li {
         cursor: pointer;
@@ -42,6 +48,7 @@ main {
         p {
           margin-left: 10px;
           margin-right: 32px;
+          text-align: start;
         }
       }
       span {
@@ -56,14 +63,6 @@ main {
 
   @media (min-width: 900px) {
     margin-left: 350px;
-    h1,
-    h2,
-    h3,
-    p,
-    a,
-    span {
-      text-align: center;
-    }
     h2 {
       grid-column-start: 3;
       grid-column-end: 11;
@@ -110,16 +109,15 @@ main {
             margin: 0;
             li {
               padding: 24px 24px 0 24px;
-
               flex-direction: column;
               border-bottom: 0;
               img.arrow {
                 display: none;
               }
-
               p {
                 font-size: 15px;
                 margin: 24px 0 10px 0;
+                text-align: center;
               }
             }
           }

@@ -60,27 +60,47 @@
         <a aria-label="tel" href="tel:+375291700412" class="tel">
           +375&nbsp;(29)&nbsp;170-04-12
         </a>
-        <nav class="expanded-menu">
-          <ul>
-            <li id="top-main">
-              Главная
-            </li>
-            <li id="top-blog">
-              Блог
-            </li>
-            <li id="top-self">
-              Обо мне
-            </li>
-          </ul>
-        </nav>
-        <!-- <div class="expanded-menu">
-          <a href="/">Главная</a>
-          <a href="https://www.lawkrok.by">Блог</a>
-          <a href="/self">Обо мне </a>
-        </div> -->
+        <div id="burger-menu">
+          <input id="burger" type="checkbox" />
+          <label for="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <nav>
+            <ul>
+              <li id="top-main">
+                Главная
+              </li>
+              <li id="top-help-kind">
+                Виды юридической помощи
+              </li>
+              <li id="top-mediation">
+                Медиация
+              </li>
+              <li id="top-contacts-info">
+                Контакты
+              </li>
+              <li id="top-self">
+                Обо мне
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="header-content">
-        <img alt="logo" src="static/logo.svg" />
+        <div id="logo" class="logo">
+          <img alt="logo" src="static/main-logo.svg" />
+          <div class="tag">
+            <div class="title">
+              АДВОКАТ <br />
+              по гражданским и экономическим делам
+            </div>
+            <div class="upper">
+              Белова Ксения Сергеевна
+            </div>
+          </div>
+        </div>
         <div class="social">
           <a aria-label="mail" href="mailto:lawbel.by@gmail.com">
             <img alt="mail" src="static/mail.svg" />
