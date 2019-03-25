@@ -75,14 +75,18 @@ main {
       grid-column-end: 13;
       margin-left: 38px;
       margin-right: 38px;
-      &:not(:last-child):not(.description):after {
-        content: "";
-        position: absolute;
-        display: block;
-        border-top: 2px solid #367c83;
-        width: 70%;
-        bottom: -3rem;
-        left: 15%;
+
+      &.about,
+      &.help {
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          border-top: 2px solid #367c83;
+          width: 70%;
+          bottom: -3rem;
+          left: 15%;
+        }
       }
       &.help {
         h3 {
@@ -131,7 +135,7 @@ main {
         font-size: 0.8rem;
         align-self: flex-end;
         margin-bottom: 2rem;
-        margin-top: 5rem;
+        margin-top: 2rem;
         line-height: 1.3;
       }
     }
