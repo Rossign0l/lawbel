@@ -76,6 +76,9 @@ section.side {
       text-align: center;
       cursor: pointer;
       text-transform: uppercase;
+      &:last-child {
+        border-bottom: 0;
+      }
       &:hover {
         text-decoration: underline;
       }

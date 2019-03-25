@@ -1,6 +1,12 @@
 .contacts-info {
   .payment {
     display: none;
+    h6 {
+      font-weight: normal;
+    }
+    p {
+      line-height: 22px;
+    }
   }
   .contacts {
     line-height: 24px;
@@ -12,12 +18,9 @@
         margin: 1rem 0;
       }
       a {
-        font-size: 18px;
+        font-size: 16px;
         text-decoration: underline;
       }
-    }
-    h6 {
-      display: none;
     }
     margin: 1rem 0;
   }

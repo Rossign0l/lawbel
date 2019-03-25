@@ -33,7 +33,6 @@ main {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding: 24px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         position: relative;
         &:hover {
@@ -56,8 +55,11 @@ main {
         margin-top: 1rem;
       }
     }
-    &#license {
+    &.license {
       display: none;
+    }
+    &.hidden {
+      display: none !important;
     }
   }
 
@@ -73,7 +75,7 @@ main {
       grid-column-end: 13;
       margin-left: 38px;
       margin-right: 38px;
-      &:not(:last-child):after {
+      &:not(:last-child):not(.description):after {
         content: "";
         position: absolute;
         display: block;
@@ -123,11 +125,14 @@ main {
           }
         }
       }
-      &#license {
+      &.license {
         display: block;
         text-align: center;
         font-size: 0.8rem;
         align-self: flex-end;
+        margin-bottom: 2rem;
+        margin-top: 5rem;
+        line-height: 1.3;
       }
     }
   }

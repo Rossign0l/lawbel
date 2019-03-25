@@ -10,12 +10,19 @@
   cursor: pointer;
   img {
     height: 2.5rem;
-    margin-right: 0.5rem;
+    margin-right: 0.4rem;
   }
   .title {
     border-bottom: 1px solid;
   }
   .upper {
     text-transform: uppercase;
+  }
+  @media (max-width: 900px) {
+    font-size: 0.8rem;
+    img {
+      height: 2.1rem;
+      margin-right: 0.4rem;
+    }
   }
 }
