@@ -4,7 +4,7 @@ const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 // const getNameFromDir = dir => {
 //   const lastSlash = dir.lastIndexOf("/");
 //   return dir.slice(lastSlash + 1);
@@ -97,6 +97,9 @@ module.exports = {
         removeComments: true,
         removeEmptyAttributes: true
       }
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: "defer"
     })
   ],
   stats: {

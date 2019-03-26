@@ -45,5 +45,8 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "script-ext-html-webpack-plugin": "^2.1.3"
+  }
 }
