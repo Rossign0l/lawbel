@@ -1,28 +1,40 @@
-const glob = require("glob");
 const path = require("path");
-
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
-// const getNameFromDir = dir => {
-//   const lastSlash = dir.lastIndexOf("/");
-//   return dir.slice(lastSlash + 1);
-// };
 
-// const generateHTMLPlugins = () =>
-//   glob.sync("./src/**/*.html").map(
-//     dir =>
-// new HTMLWebpackPlugin({
-//   filename: getNameFromDir(dir),
-//   template: dir,
-//   minify: {
-//     collapseWhitespace: true,
-//     removeComments: true,
-//     removeEmptyAttributes: true
-//   }
-// });
-//   );
+const pages = [
+  "index",
+  "debt",
+  "representation",
+  "documents",
+  "service",
+  "agency",
+  "bankruptcy",
+  "consultation",
+  "claim",
+  "lawsuit",
+  "negotiation",
+  "mediation",
+  "agreement",
+  "self"
+];
+
+const generateHTMLPlugins = pages =>
+  pages.map(
+    page =>
+      new HtmlWebpackPlugin({
+        filename: `${page}.html`,
+        template: `./src/pages/${page}.html`,
+        minify: {
+          collapseWhitespace: true,
+          removeComments: true,
+          removeEmptyAttributes: true
+        },
+        page: page
+      })
+  );
 
 module.exports = {
   node: {
@@ -35,15 +47,8 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.js$/,
-      //   loader: "babel-loader",
-      //   query: {
-      //     presets: ["env"]
-      //   }
-      // },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
             loader: "file-loader",
@@ -60,20 +65,8 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader
           },
           "css-loader",
-          // {
-          //   loader: "postcss-loader",
-          //   options: {
-          //     config: {
-          //       path: path.resolve(__dirname, "postcss.config.js")
-          //     }
-          //   }
-          // },
           "sass-loader"
         ]
-      },
-      {
-        test: /\.html$/,
-        loader: "raw-loader"
       }
     ]
   },
@@ -88,16 +81,7 @@ module.exports = {
         to: "./static/"
       }
     ]),
-    // ...generateHTMLPlugins()
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "./src/index.html",
-      minify: {
-        collapseWhitespace: true,
-        removeComments: true,
-        removeEmptyAttributes: true
-      }
-    }),
+    ...generateHTMLPlugins(pages),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: "defer"
     })

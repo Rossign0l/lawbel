@@ -28,7 +28,8 @@ main {
       }
     }
     &.help {
-      li {
+      li,
+      a {
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -107,13 +108,14 @@ main {
           border-radius: 25px;
           margin-top: 48px;
           position: relative;
-          ul {
+          .help-container {
             display: grid;
             grid-template-rows: auto;
             grid-template-columns: repeat(3, 1fr);
             padding: 48px;
             margin: 0;
-            li {
+            li,
+            a {
               padding: 24px 24px 0 24px;
               flex-direction: column;
               border-bottom: 0;

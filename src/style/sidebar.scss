@@ -66,7 +66,8 @@ section.side {
     grid-column-end: 12;
     flex-direction: column;
     display: flex;
-    li {
+    li,
+    a {
       color: #fff;
       letter-spacing: 2px;
       padding: 0.8rem 0;
