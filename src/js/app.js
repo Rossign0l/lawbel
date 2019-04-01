@@ -40,10 +40,17 @@
 // // //   .querySelectorAll("li")
 // // //   .forEach(button => button.addEventListener("click", handleNavClick));
 
-// // // document
-// // //   .querySelectorAll(".logo")
-// // //   .forEach(logo => logo.addEventListener("click", handleNavClick));
-
+document
+  .querySelectorAll(".logo")
+  .forEach(logo =>
+    logo.addEventListener("click", () =>
+      window.location.replace("https://lawbel.by/")
+    )
+  );
+window.addEventListener(
+  "popstate",
+  () => (document.getElementById("burger").checked = false)
+);
 // // // function handleNavClick(e) {
 // // //   var helpDescr = document.getElementById("description");
 // // //   if (helpDescr) mainSection.removeChild(helpDescr);
