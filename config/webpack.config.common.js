@@ -81,10 +81,10 @@ module.exports = {
         to: "./static/"
       }
     ]),
-    ...generateHTMLPlugins(pages),
-    new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: "defer"
-    })
+    ...generateHTMLPlugins(pages)
+    // new ScriptExtHtmlWebpackPlugin({
+    //   defaultAttribute: "defer"
+    // })
   ],
   stats: {
     colors: true
